@@ -565,13 +565,13 @@ def parse_SDDL(sddl_string):
 
     # Parsing DACL
     if "D" in sddl_string.keys():
-        aces = re.findall(pattern="\(([^)]*)\)", string=sddl_string["D"], flags=re.IGNORECASE)
+        aces = re.findall(pattern=r"\(([^)]*)\)", string=sddl_string["D"], flags=re.IGNORECASE)
         for ace_string in aces:
             parsed_sd["DACL"].append(parseACE(ace_string))
 
     # Parsing SACL
     if "S" in sddl_string.keys():
-        aces = re.findall(pattern="\(([^)]*)\)", string=sddl_string["S"], flags=re.IGNORECASE)
+        aces = re.findall(pattern=r"\(([^)]*)\)", string=sddl_string["S"], flags=re.IGNORECASE)
         for ace_string in aces:
             parsed_sd["DACL"].append(parseACE(ace_string))
 
