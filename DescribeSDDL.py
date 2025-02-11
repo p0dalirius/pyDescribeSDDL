@@ -579,7 +579,7 @@ def parse_SDDL(sddl_string):
     
 
 def parseArgs():
-    print("DescribeSDDL.py v%s - by @podalirius_\n" % VERSION)
+    print("DescribeSDDL.py v%s - by Remi GASCOU (Podalirius)\n" % VERSION)
 
     parser = argparse.ArgumentParser(add_help=True, description="Parse and describe the contents of a SDDL string")
 
