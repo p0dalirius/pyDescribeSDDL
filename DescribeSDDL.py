@@ -573,7 +573,7 @@ def parse_SDDL(sddl_string):
     if "S" in sddl_string.keys():
         aces = re.findall(pattern=r"\(([^)]*)\)", string=sddl_string["S"], flags=re.IGNORECASE)
         for ace_string in aces:
-            parsed_sd["DACL"].append(parseACE(ace_string))
+            parsed_sd["SACL"].append(parseACE(ace_string))
 
     return parsed_sd
     
